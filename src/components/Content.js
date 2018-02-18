@@ -7,7 +7,7 @@ class Content extends React.Component {
 
 	render(){
 		return <s.ContentWrapper>
-				<ForecastWidget location="Mumbai,in" />
+				<ForecastWidget location="Mumbai,In" />
 		</s.ContentWrapper>
 	}
 }

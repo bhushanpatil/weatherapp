@@ -9,12 +9,12 @@ const WeatherItem = (props) => (<s.WeatherItem isActive={props.isActive}>
 		<s.DateSubHeading2>{moment(props.data.dt * 1000).format("h:mm a")}</s.DateSubHeading2>
 
 		<s.Imagewrapper>
-			<img src={"http://openweathermap.org/img/w/"+props.data.weather[0].icon+".png"} width="80px" height="80px" />
+			<img alt={props.data.weather[0].main} src={"http://openweathermap.org/img/w/"+props.data.weather[0].icon+".png"} width="80px" height="80px" />
 		</s.Imagewrapper>
 
 		<s.TempWrapper>
-			<s.LargTemp>{parseInt(props.data.main.temp_max)}&deg;</s.LargTemp>
-			<s.SmallTemp>/{parseInt(props.data.main.temp_min)}&deg;</s.SmallTemp>
+			<s.LargTemp>{parseInt(props.data.main.temp_max,10)}&deg;</s.LargTemp>
+			<s.SmallTemp>/{parseInt(props.data.main.temp_min,10)}&deg;</s.SmallTemp>
 		</s.TempWrapper>
 
 		<s.InfoWrapper>

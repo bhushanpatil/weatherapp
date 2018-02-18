@@ -48,7 +48,7 @@ class ForecastWidget extends React.Component {
 				<s.WidgetScroller isVisible={this.state.weatherData && this.state.weatherData.list && this.state.weatherData.list.length > 0}>
 					
 					{this.state.weatherData && this.state.weatherData.list && 
-						this.state.weatherData && this.state.weatherData.list.map((itme)=><WeatherItem data={itme}/>								
+						this.state.weatherData && this.state.weatherData.list.map((item,index)=><WeatherItem data={item} key={index}/>								
 						)}
 				</s.WidgetScroller>
 				</s.WidgetWrapper>
